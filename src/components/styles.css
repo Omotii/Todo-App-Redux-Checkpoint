@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-bg {
+    width: 50%;
+    height: 100%;
+    background: rgb(226, 220, 149);
+}
+
+.container {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6rem 0 6rem 0;
+    gap: 3rem;
+}
+
+.img-container {
+    width: 20%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.swift-container {
+    background-color: white;
+    padding: 2rem;
+    border: 4px solid rgb(226, 220, 149);
+    border-radius: 10px;
+}
+
+.swift-container img {
+    width: 30%;
+    margin-top: 15px;
+}
+
+.swift-container h1 {
+    color: rgb(129, 126, 97);
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.swift-container p {
+    font-size: 2rem;
+    color: rgb(129, 126, 97);
+}
+
+.get-started-container {
+    position: absolute;
+    bottom: 10px;
+}
+
+.about-container {
+    position: absolute;
+    top: 10px;
+}
+
+.get-started {
+    background-color: rgb(226, 220, 149);;
+    padding: 1.2rem 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+
+#get-started, #about {
+    color: black;
+    text-decoration: none;
+}
+
+.get-started:hover {
+    background-color: rgb(250, 240, 133);;
+}
+
+.welcome-user {
+    font-size: 2rem;
+    color: rgb(231, 197, 2);
+}
+
+.user-name-caption-container {
+    width: 30%;
+    height: 40vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15%;
+    margin-top: -20vh;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.5s linear;
+}
+
+.user-name-caption-container p {
+    font-size: 1.5rem;
+    color: rgb(129, 126, 97);
+}
+
+.user-name-caption-container input[type], .user-name-caption-container button, .close {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(233, 229, 186);;
+}
+
+.user-name-caption-container button {
+    background-color: rgb(245, 187, 63);
+    cursor: pointer;
+}
+
+.user-name-caption-container button:hover {
+    background-color: rgb(253, 205, 102);
+}
+
+.close {
+    background-color: rgb(158, 70, 29);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close:hover {
+    background-color: rgb(182, 24, 3);
+}
+
+.active {
+    visibility: visible;
+}
+
+.inactive {
+    visibility: hidden;
+    opacity: 50%;
+}
+
+.active1 {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 5px;
+    transition: all 1s ease-in;
+}
+
+.inactive1 {
+    display: none;
+    opacity: 50%;
+    transition: all 1s ease-in;
+}
+
+.form-back-focus {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(226, 220, 149);;
+    position: absolute;
+    top: 0;
+    opacity: 60%;
+    transition: 0.5s linear;
+}
+
+.form-back {
+    visibility: visible;
+}
+
+.form-back-false {
+    visibility: hidden;
+}
+
+.tasks-display-section {
+    padding: 10px 25px;
+    width: 60%;
+    margin: 10px 5px 10px 30vw;
+}
+
+.tasks-display-section h2, .add-task {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.my-tasks-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.filter button {
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.filter button:hover {
+    border: 1px solid rgb(243, 202, 149);
+}
+
+.active-done {
+    color: white;
+    background-color: rgb(112, 179, 13);
+}
+
+.active-undone {
+    color: white;
+    background-color: red;
+}
+
+.task-card {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: 1px solid rgb(223, 180, 100);
+}
+
+.title-container {
+    text-align: left;
+}
+
+aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    padding: 20px 25px;
+    background-color: rgb(231, 226, 176);
+}
+
+.aside-image {
+    width: 80%;
+}
+
+.aside-image img {
+    width: 100%;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-form input, .task-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.task-form button, .active1 button {
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(196, 192, 151);
+    border: none;
+}
+
+.task-form button:hover, .active1 button:hover {
+    background-color: rgb(212, 210, 188);
+    color: white;
+}
+
+.projects-list {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.edit-task {
+    margin-left: 15px;
+    color: rgb(65, 65, 126);
+    cursor: pointer;
+}
+
+.edit-task:hover {
+    text-decoration: underline;
+}
+
+.edit-task-form {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.active1 input, .active1 button {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.active1 input:last-of-type {
+    width: 50%;
+}
+
+.active1 input {
+    border: 1px solid antiquewhite;
+}
+
+.active1 input:hover {
+    border-color: rgb(235, 170, 85);
+}
+
+.status {
+    padding: 3px 7px;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.status:hover {
+    background-color: rgb(243, 215, 178);
+}
+
+.status-undone {
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.status-done {
+    background-color: rgb(112, 179, 13);
+    color: white;
+    border-radius: 3px;
+    padding: 2px 15px;
+    margin-left: 10px
+}
+
+.done-title-color {
+    color: rgb(112, 179, 13);
+}
+
+.undone-title-color {
+    color: rgb(94, 93, 88);
+}
+
+.todo-page-header {
+    text-align: right;
+    color: rgb(94, 93, 88);
+    margin-right: 10vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.todo-page-header h1 {
+    font-weight: normal;
+}
+
+.navigation-todo-page span {
+    background-color: rgb(231, 226, 176);
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navigation-todo-page span:hover {
+    background-color: rgb(238, 236, 214);
+}
+
+#back-home {
+    text-decoration: none;
+    color: rgb(94, 93, 88);
+}
